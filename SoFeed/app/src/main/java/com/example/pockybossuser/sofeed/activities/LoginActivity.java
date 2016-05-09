@@ -1,7 +1,9 @@
-package com.example.pockybossuser.sofeed;
+package com.example.pockybossuser.sofeed.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.pockybossuser.sofeed.R;
 
 public class LoginActivity extends AppCompatActivity {
 
