@@ -9,8 +9,68 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".activities.LoginActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_marginTop="194dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Username"
+            android:id="@+id/login_tv_username"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_etxt_username"
+            android:text="Username"
+            android:layout_below="@+id/login_tv_username"
+            android:layout_alignLeft="@+id/login_tv_username"
+            android:layout_alignStart="@+id/login_tv_username"
+            android:layout_alignRight="@+id/login_etxt_password"
+            android:layout_alignEnd="@+id/login_etxt_password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Password"
+            android:id="@+id/login_tv_password"
+            android:layout_below="@+id/login_etxt_username"
+            android:layout_alignLeft="@+id/login_etxt_username"
+            android:layout_alignStart="@+id/login_etxt_username" />
+
+        <EditText
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/login_etxt_password"
+            android:layout_below="@+id/login_tv_password"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Password" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/login_btn_login" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/login_btn_register" />
+
+    </LinearLayout>
+
 </RelativeLayout>
