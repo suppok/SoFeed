@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Username"
-            android:id="@+id/login_tv_username"
+            android:id="@+id/regis_tv_username"
             android:layout_alignTop="@+id/linearLayout"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -30,31 +30,31 @@
         <EditText
             android:layout_width="175dp"
             android:layout_height="wrap_content"
-            android:id="@+id/login_etxt_username"
+            android:id="@+id/regis_etxt_username"
             android:text="Username"
-            android:layout_below="@+id/login_tv_username"
-            android:layout_alignLeft="@+id/login_tv_username"
-            android:layout_alignStart="@+id/login_tv_username"
-            android:layout_alignRight="@+id/login_etxt_password"
-            android:layout_alignEnd="@+id/login_etxt_password" />
+            android:layout_below="@+id/regis_tv_username"
+            android:layout_alignLeft="@+id/regis_tv_username"
+            android:layout_alignStart="@+id/regis_tv_username"
+            android:layout_alignRight="@+id/regis_etxt_password"
+            android:layout_alignEnd="@+id/regis_etxt_password" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Password"
-            android:id="@+id/login_tv_password"
-            android:layout_below="@+id/login_etxt_username"
-            android:layout_alignLeft="@+id/login_etxt_username"
-            android:layout_alignStart="@+id/login_etxt_username" />
+            android:id="@+id/regis_tv_password"
+            android:layout_below="@+id/regis_etxt_username"
+            android:layout_alignLeft="@+id/regis_etxt_username"
+            android:layout_alignStart="@+id/regis_etxt_username" />
 
         <EditText
             android:layout_width="174dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/login_etxt_password"
-            android:layout_below="@+id/login_tv_password"
+            android:id="@+id/regis_etxt_password"
+            android:layout_below="@+id/regis_tv_password"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:text="Password" />
