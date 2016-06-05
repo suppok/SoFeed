@@ -7,93 +7,267 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activities.RegisterActivity">
+    tools:context=".activities.RegisterActivity"
+    android:background="#dbffed">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:layout_alignParentTop="true">
-
-        <TextView
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Username"
-            android:id="@+id/regis_tv_username"
-            android:layout_alignTop="@+id/linearLayout"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <EditText
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/regis_etxt_username"
-            android:text="Username"
-            android:layout_below="@+id/regis_tv_username"
-            android:layout_alignLeft="@+id/regis_tv_username"
-            android:layout_alignStart="@+id/regis_tv_username"
-            android:layout_alignRight="@+id/regis_etxt_password"
-            android:layout_alignEnd="@+id/regis_etxt_password" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Password"
-            android:id="@+id/regis_tv_password"
-            android:layout_below="@+id/regis_etxt_username"
-            android:layout_alignLeft="@+id/regis_etxt_username"
-            android:layout_alignStart="@+id/regis_etxt_username" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/regis_etxt_password"
-            android:layout_below="@+id/regis_tv_password"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="password" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Confirm Password"
-            android:id="@+id/regis_tv_confirmPass" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/regis_edt_confirmPass"
-            android:text="password" />
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Username"
+                android:id="@+id/regis_tv_username"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/regis_etxt_username"
+                android:layout_below="@+id/regis_tv_username"
+                android:layout_alignLeft="@+id/regis_tv_username"
+                android:layout_alignStart="@+id/regis_tv_username"
+                android:layout_alignRight="@+id/regis_etxt_password"
+                android:layout_alignEnd="@+id/regis_etxt_password"
+                android:hint="Username" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Facebook account :"
-                android:id="@+id/regis_tv_fbAccount" />
+                android:text="Password"
+                android:id="@+id/regis_tv_password"
+                android:layout_below="@+id/regis_etxt_username"
+                android:layout_alignLeft="@+id/regis_etxt_username"
+                android:layout_alignStart="@+id/regis_etxt_username" />
 
-            <Button
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login with Facebook"
-                android:id="@+id/regis_btn_loginFB"
-                android:layout_below="@+id/regis_etxt_username"/>
-        </LinearLayout>
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/regis_etxt_password"
+                android:layout_below="@+id/regis_tv_password"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="password" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Confirm Password"
+                android:id="@+id/regis_tv_confirmPass" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/regis_edt_confirmPass"
+                android:hint="password" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Facebook account "
+                android:id="@+id/regis_tv_fbAccount" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Username :"
+                    android:id="@+id/textView"
+                    android:layout_alignTop="@+id/linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingRight="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtxt_facebook_username"
+                    android:layout_weight="0.61" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Password :"
+                    android:id="@+id/textView2"
+                    android:layout_alignTop="@+id/linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingRight="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtxt_facebook_password"
+                    android:layout_weight="0.61" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Twitter account "
+                android:id="@+id/textView3" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Username :"
+                    android:id="@+id/textView4"
+                    android:layout_alignTop="@+id/linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingRight="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtxt_twitter_username"
+                    android:layout_weight="0.61" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Password :"
+                    android:id="@+id/textView5"
+                    android:layout_alignTop="@+id/linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingRight="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtxt_twitter_password"
+                    android:layout_weight="0.61" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Intagram account "
+                android:id="@+id/textView6" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Username :"
+                    android:id="@+id/textView7"
+                    android:layout_alignTop="@+id/linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingRight="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtxt_instagram_username"
+                    android:layout_weight="0.61" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Password :"
+                    android:id="@+id/textView8"
+                    android:layout_alignTop="@+id/linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingRight="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtxt_instagram_password"
+                    android:layout_weight="0.61" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:id="@+id/regis_btn_save" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:id="@+id/regis_btn_cancel" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:orientation="vertical"
@@ -101,23 +275,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Save"
-                android:id="@+id/regis_btn_save" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cancel"
-                android:id="@+id/regis_btn_cancel" />
-        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

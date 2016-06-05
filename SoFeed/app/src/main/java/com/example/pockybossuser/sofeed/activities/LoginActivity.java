@@ -9,14 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.example.pockybossuser.sofeed.R;
+import com.example.pockybossuser.sofeed.models.Storage;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView login_tv_username;
-    private TextView login_tv_password;
     private EditText login_edtxt_username;
     private EditText login_edtxt_password;
     private Button login_btn_login;
@@ -33,10 +31,9 @@ public class LoginActivity extends AppCompatActivity {
     private void initComponents() {
 
         ActionBar bar = getSupportActionBar();
+        bar.setTitle("Login");
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00E676")));
 
-        login_tv_username = (TextView) findViewById(R.id.regis_tv_username);
-        login_tv_password = (TextView) findViewById(R.id.regis_tv_password);
         login_edtxt_username = (EditText) findViewById(R.id.regis_etxt_username);
         login_edtxt_password = (EditText) findViewById(R.id.regis_etxt_password);
         login_btn_login = (Button) findViewById(R.id.login_btn_login);
@@ -44,8 +41,16 @@ public class LoginActivity extends AppCompatActivity {
 
         login_btn_login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, FacebookActivity.class);
-                startActivity(intent);
+                String username = login_edtxt_username.getText().toString();
+                String password = login_edtxt_password.getText().toString();
+                if(checkUser(username,password)) {
+                    Intent intent = new Intent(LoginActivity.this, FacebookActivity.class);
+                    intent.putExtra("User",username);
+                    intent.putExtra("Pass",password);
+                    startActivity(intent);
+                    finish();
+                }
+
             }
         });
 
@@ -53,8 +58,20 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
+    }
+
+    private boolean checkUser(String username, String password) {
+        if(Storage.getInstance().getUser(username,password) == null) {
+            System.out.println(username);
+            System.out.println(password);
+            System.out.println("Wrong User");
+            return false;
+        }
+        System.out.println("Right User");
+        return true;
     }
 }

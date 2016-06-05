@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.FacebookActivity">
+
+    <item
+        android:id="@+id/action_facebook"
+        android:title="Facebook"
+        android:icon="@drawable/facebook_icon"/>
+
+    <item
+        android:id="@+id/action_twitter"
+        android:title="Twitter"
+        android:icon="@drawable/twitter_icon"/>
+
+    <item
+        android:id="@+id/action_instagram"
+        android:title="Instagram"
+        android:icon="@drawable/instagram_icon"/>
+
+    <item
+        android:id="@+id/action_post"
+        android:title="Post status"
+        android:icon="@drawable/post_icon"/>
+
+</menu>

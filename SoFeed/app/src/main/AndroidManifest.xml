@@ -16,7 +16,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.FacebookActivity"></activity>
+        <activity
+            android:name=".activities.FacebookActivity"
+            android:label="@string/title_activity_new_facebook"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.TwitterActivity"
+            android:label="@string/title_activity_new_twitter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.InstagramActivity"
+            android:label="@string/title_activity_new_instagram"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

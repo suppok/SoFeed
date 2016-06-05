@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activities.LoginActivity">
+    tools:context=".activities.LoginActivity"
+    android:background="#dbffed">
 
     <LinearLayout
         android:orientation="vertical"
@@ -31,12 +32,12 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:id="@+id/regis_etxt_username"
-            android:text="Username"
             android:layout_below="@+id/regis_tv_username"
             android:layout_alignLeft="@+id/regis_tv_username"
             android:layout_alignStart="@+id/regis_tv_username"
             android:layout_alignRight="@+id/regis_etxt_password"
-            android:layout_alignEnd="@+id/regis_etxt_password" />
+            android:layout_alignEnd="@+id/regis_etxt_password"
+            android:hint="Username" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,7 +58,7 @@
             android:layout_below="@+id/regis_tv_password"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:text="Password" />
+            android:hint="password" />
 
         <Button
             android:layout_width="wrap_content"
